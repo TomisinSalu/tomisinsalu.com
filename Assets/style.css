@@ -17,14 +17,14 @@ html{
 :root{
     --primary-color:white;
     --sub-primary-color: rgb(198, 198, 198);
-    --secondary-color: coral;
+    --secondary-color: rgb(241, 96, 44);
     --secondary-darker: rgb(205, 86, 42) ;
-    --var-bg-color: #020024;
+    --var-bg-color: rgb(2, 0, 36);
     --subheading-size: 50px;
     
     --text-shadow: 0px 4px 5px #000000;
 
-    --transition-speed: 200ms ease-in;
+    --transition-speed: 200ms ease-out;
 }
 
 body {
@@ -33,11 +33,13 @@ body {
     /* background-color: var(--var-bg-color);
     background-image: url(images/bg-texture.png); */
     scroll-behavior: smooth;
-    background-color: #000929;
+    /* background-color: #000929; */
+    background-color: #0f0026;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2306006b' fill-opacity='0.57' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
+
 section {
     display:block;
-    height: 125vh;
     width: 100vw;
     padding: 20px 100px 150px;
 }
@@ -48,35 +50,36 @@ section {
 
 .hero{
     background: url(images/citybg.jpg) no-repeat center center/cover fixed;
-    height: 115vh;
+    height: 100vh;
+    padding-top: 100px;
 }
 
 
-.info p{
-    line-height: 30px;
+.header-subtext{
+    line-height: 0px;
 }
 
 nav {
     font-size: 20px;
     width: 100vw;
     height: 55px;
-    /* background-color: var(--var-bg-color); */
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.797);
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='grey' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     position: fixed;
     z-index: 10;
     padding-left: 100px;
     padding-right: 100px;
-    /* background-image: url(images/bg-texture.png); */
-    /* box-shadow: 0px 5px 10px #000000b7 ; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: var(--transition-speed);
+    backdrop-filter: blur(5px);
 
 }   
-
+a{
+    color:var(--sub-primary-color)
+}
 .logo-container{
-    color: var(--secondary-darker);
     font-weight: 500;
     font-size: 25px;
     /* display: none; */
@@ -84,12 +87,16 @@ nav {
 }
 
 .logo-container a{
-    color: var(--secondary-darker);
+    color: var(--primary-color);
     text-align: justify;
+    transition: var(--transition-speed);
+    text-shadow: 0px 0px 5px var(--secondary-color);
 }
 
 .logo-container a:hover{
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    /* box-shadow: 0px 0px 12px 2px var(--secondary-color); */
+    
 }
 
 .logo{
@@ -110,12 +117,6 @@ li {
     transition: color var(--transition-speed);
     padding: 0px 30px;
     
-}
-
-a{
-    font-style: none;
-    color: var(--sub-primary-color);
-    transition: var(--transition-speed);
 }
 
 ul li a:hover, ul li a:focus{
@@ -143,6 +144,14 @@ ul li a:hover, ul li a:focus{
     background-color: rgb(92, 92, 92);
 }
 
+.header-subtext{
+    color: var(--secondary-color);
+    text-align: left;
+}
+
+center{
+    text-align: center;
+}
 
 h1 {
     font-size: 100px;
@@ -161,15 +170,16 @@ p {
     font-size: 20px;
     font-weight: 300;
 }
-.highlighted-text{
-    color: var(--secondary-darker);
+span{
+    color: var(--secondary-color);
 }
 
 .title{
+    line-height: 5px;
     padding: 0px;
-    margin: 0px;
+    margin-top: 0px;    
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.704);
 }
 
@@ -182,45 +192,52 @@ p {
     
 }
 
-.hero-text {
 
+.hero-prompts{
+    display: flex;
+    justify-content: left;
 }
 
 .button {
-    width: 200px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 55px;
     border-radius: 10px;
-    background-color: transparent;
+    /* background-color: var(--secondary-color); */
     text-align: center;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 400;
     padding-top: 5px;
     margin-top: 20px;
-    border: 3px solid var(--secondary-color);
+    border: 3.5px solid var(--secondary-color);
     overflow: hidden;
     transition: var(--transition-speed);
-    
+    backdrop-filter: blur(5px); 
+    font-style: none;
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.wide-button{
+    margin-left: 20px;
+}
+
+.button:hover {
+    box-shadow: -5px 5px 6px 1px rgba(0, 0, 0, 0.534);
+    /* transform: scale(1.02); */
+    transform: translateY(-5px);
+    background-color: var(--secondary-color);
+
 }
 
 .button a{
     color: var(--primary-color);
 }
-
-.button:hover {
-    background-color: var(--secondary-color);
-    border: 3px solid transparent;
-    cursor: pointer;
-}
-
 .button:active{
     background-color: var(--secondary-darker);
-    border: 3px solid transparent;
-}
-
-button{
-    all: unset;
-    cursor: pointer;
-    color: var(--primary-color);
+    border: 3.5px solid var(--secondary-darker);
 }
 
 .socials {
@@ -234,21 +251,21 @@ button{
 
 .social svg{
     fill: var(--sub-primary-color);
+    transition: var(--transition-speed)
 }
 
 .social svg:hover{
     fill: var(--primary-color);
-    transition: var(--transition-speed);
+
 }
 
 /*------------ABOUT ME SECTION--------------*/
 .sub-section {
-    padding-top: 20vh;
     display: flex;
     justify-content: left;
     height: 100vh;
     align-items: center;
-    margin-top: 10vh;
+    padding-top: 10vh;
     
     /* outline: white 3px solid; */
 }
@@ -258,29 +275,31 @@ button{
 }
 
 .headshot-container{
-    
+    align-self: baseline;
 }
 
 .headshot {
     object-fit: cover;
-    height: 500px;
+    height: auto;
     width: 370px;
     border-radius: 25px;
     /* border: 5px solid var(--sub-primary-color); */
     margin-left: 30px;
     transition: var(--transition-speed);
     flex-basis: 20%;
+    filter: brightness(80%);
 
 }
 .information{
     flex-basis: 80%; 
     padding-right: 70px;
+    padding: none;
 }
 
 .headshot:hover {
     filter: var(--secondary-color);
     box-shadow: 0px 0px 12px 2px var(--secondary-color);
-    transform: scale(1.04);
+    filter: brightness(100%);
 }
 
 .information h2 {
@@ -290,14 +309,30 @@ button{
 
 .skills{
    display: flex; 
+   flex-wrap: wrap;
    justify-content: space-between;
    text-align: center;
+   width: 100%;
+   /* outline: red 1px solid; */
 
 }
 .skills img{
     object-fit: cover;
-    height: 60px;
+    height: 40px;
     width: auto;
+}
+.skills div{
+    
+}
+.skills div p{
+    /* padding: 15px 60px 15px 60px; */
+    transition: var(--transition-speed);
+    color: var(--primary-color);
+    font-weight: 300;
+    font-size: 15px;
+}
+.skills div:hover .skills>div>p{
+    color: var(--primary-color)
 }
 
 
@@ -310,13 +345,7 @@ h3{
     font-size: 20px;
     font-weight: 350;
     text-align: left;
-}
-
-.information p{
-    color: var(--sub-primary-color);
-
-    
-   
+    color: var(--sub-primary-color)
 }
 
 .divider{
@@ -331,9 +360,8 @@ h3{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 40px 100px 10px 100px;
+    padding: 30px 100px 0px 100px;
     /* outline: red 1px solid; */
-    margin-top: 10vh;
     height: auto;
 }
 
@@ -360,7 +388,7 @@ hr{
     /* border-bottom: 2px solid white; */
     margin: 0;
     overflow-y: scroll;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 
 .project-container::-webkit-scrollbar-track {
@@ -400,17 +428,23 @@ hr{
     margin-bottom: 40px;
     color: var(--sub-primary-color);
     background-color: black;
+    overflow: hidden;
+    
 }
 
 .project-card:hover{
     box-shadow: 0px 0px 12px 2px var(--secondary-color);
-    transform: scale(1.04);
+    transform: scale(1.05);
     color: var(--primary-color);
     /* background-color: var(--secondary-darker); */
 } 
 
+.project-card:hover .project-image{
+    filter: brightness(100%);
+}
 .description-container{
     background-color: black;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='grey' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     height: 130px;
     padding: 15px;
     border-radius: 0px 0px 25px 25px;
@@ -445,16 +479,26 @@ hr{
     height: 300px;
     object-fit: cover;
     overflow: hidden;
+    transition: var(--transition-speed);
+    filter: brightness(80%);
 }
 
+.odd{
+    width: 94.5%;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+}
 .subtext {
     font-size: 15px;
     font-weight: 300px;
 }
 
+
+
 /*------------FOOTER/CONTACT SECTION--------------*/
     
 footer {
+    display:none;
     padding: auto;
     height: 3   0vh;
     padding: 0px 0px 30px ;
@@ -470,11 +514,6 @@ footer {
     margin: auto;
     height: auto;
     /* outline: yellow 2px solid; */
-}
-
-.intro-p{
-    color: var(--secondary-color);
-    margin: 0px;
 }
 
 footer h2{
@@ -527,10 +566,12 @@ footer .main-text{
 
 
 
-@media only screen and (max-width: 1000px){ 
-
+@media only screen and (max-width: 1500px){ 
+    *{
+        display: none;
+    }
     section {
-        padding: 0px 10px 100px;
+        /* padding: 0px 10px 100px; */
         overflow: hidden;
     }
 
@@ -578,10 +619,11 @@ footer .main-text{
  /*--------ABOUT ME SECTION--------*/
     .sub-section {
         flex-wrap: wrap;
-        padding: 100px 60px;
+        /* padding: 100px 60px; */
         height: 100vh;
         text-align: center;
         height: auto;
+        justify-content: center;
     }
 
     .sub-section > h2{
@@ -593,6 +635,7 @@ footer .main-text{
         /* flex-basis: 100%; */
         text-align: center;
         order: 1;
+        padding: 0px;
     }
 
     .headshot-container{
@@ -627,7 +670,22 @@ footer .main-text{
     }
 }
 
-@media only screen and (max-width: 400px){ 
+@media only screen and (max-width: 500px){ 
+    *{
+        display: none;
+        margin: none;
+        padding: none;
+    }
+
+    body{
+        max-width:100vw;
+    }
+    .hero{
+        background: url(images/citybg.jpg) no-repeat center center/cover fixed;
+        height: 100vh;
+    
+    }
+
     nav{
         display:none;
     }
@@ -638,15 +696,42 @@ footer .main-text{
         font-size: 20px;
         font-weight: 500;
     }
-    .intro-p{
-        font-size: 
-    }
+
     /*--------ABOUT ME SECTION--------*/
     .sub-section {
         flex-wrap: wrap;
-        padding: 100px 30px;
-        height: 100vh;
-        text-align: left;
+        /* padding: 100px 30px; */
         height: auto;
+        text-align: center;
+        align-content: space-between;
+        margin: unset;
     }
+
+    .information{
+        padding: unset;
+    }
+    .main-text{
+        font-size: 18px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+    #about-me > div.information > p:nth-child(1){
+        display:none;
+    }
+    #about-me > div.information > p.main-text{
+        font-size: 15px;
+        padding: unset;
+        line-height: 25px;
+    }
+    div.headshot-container > img{
+        width: 250px;
+        height: 300px;
+    }
+
+    div.headshot-container{
+        display: block;
+    }
+
 }

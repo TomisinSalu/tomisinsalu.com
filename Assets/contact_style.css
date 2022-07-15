@@ -77,11 +77,11 @@ nav {
 }
 
 .logo-container a{
-   color: var(--secondary-darker);
+   color: var(--sub-primary-color);
 }
 
 .logo-container a:hover{
-   color: var(--secondary-color);
+   color: var(--primary-color);
 }
 
 .logo{
@@ -115,38 +115,45 @@ ul li a:hover, ul li a:focus{
    /* text-shadow: var(--text-shadow); */
 }
 .main-container{
-   background-color: var(--var-bg-color);
    margin: auto;
    align-self: center;
    justify-self: center;
-   height: 500px;
+   height: auto;
    width: 750px;
    border-radius: 25px;
    display:flex;
-   box-shadow: 0px 0px 20px 10px black;
+   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.676);
    outline: 5px solid var(--secondary-darker);
    text-align: left; 
+   background-color: #0f0026;
+   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2306006b' fill-opacity='0.57' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
+
 
 .info-section{
    /* width: 300px; */
    background-color: var(--secondary-darker);
    border-radius: 25px 0px 0px 25px;
    flex-basis: 30%;
+   width: 100px;
+   
 
 }
 .contact-section{
    flex-basis: 70%;
-   background-color: black;
    background-image: none;
    border-radius: 0px 25px 25px 0px;
    padding: 15px;
+   padding-left: 25px;
+   padding-right: 25px;
+   margin: auto;
 }
 
 
 h1 {
    font-size: 30px;
    color: var(--primary-color);
+   line-height: 0px;
 }
 
 form {
@@ -166,8 +173,8 @@ input, textarea {
    @include box-shadow(0 1px 1px rgba(black, 0.1));
    resize: none;
 
-   background-color: rgb(75, 75, 75);
-   color: var(--sub-primary-color);
+   background-color: var(--primary-color);
+   color: black;
    font-family: 'Poppins', 'sans-serif';
    font-weight: 500;
 
@@ -186,7 +193,7 @@ input:focus, textarea:focus {
    cursor: pointer;
    transition: var(--transition-speed);
    font-family: 'Poppins', sans-serif;
-   font-size: 25px;
+   font-size: 20px;
    font-weight: 500;
    padding-top: 5px;
    height: 50px;
@@ -214,6 +221,16 @@ textarea {
 .left {
      margin-right: 2%; 
 }
+
+.info-section{
+   height: 100%;
+   font-size: 15px;
+   text-align: left;
+   color: rgb(255, 255, 255);
+   align-items: center;
+   padding: 20px;
+}
+
 
 
 @media (max-width: 480px) {
