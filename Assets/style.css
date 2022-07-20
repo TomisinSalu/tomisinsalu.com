@@ -90,12 +90,10 @@ a{
     color: var(--primary-color);
     text-align: justify;
     transition: var(--transition-speed);
-    text-shadow: 0px 0px 5px var(--secondary-color);
 }
 
 .logo-container a:hover{
     color: var(--primary-color);
-    /* box-shadow: 0px 0px 12px 2px var(--secondary-color); */
     
 }
 
@@ -157,6 +155,7 @@ h1 {
     font-size: 100px;
     margin: 0;
     color: var(--primary-color);
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.726);
 
 }
 
@@ -216,7 +215,8 @@ span{
     backdrop-filter: blur(5px); 
     font-style: none;
     cursor: pointer;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.235)
+    color: var(--primary-color);
 
 }
 
@@ -266,6 +266,7 @@ span{
     height: 100vh;
     align-items: center;
     padding-top: 10vh;
+    flex-grow: 1;
     
     /* outline: white 3px solid; */
 }
@@ -276,20 +277,23 @@ span{
 
 .headshot-container{
     align-self: baseline;
+    flex-grow:1;
 }
 
 .headshot {
     object-fit: cover;
     height: auto;
-    width: 370px;
+    max-width: 320px;
     border-radius: 25px;
     /* border: 5px solid var(--sub-primary-color); */
     margin-left: 30px;
     transition: var(--transition-speed);
     flex-basis: 20%;
     filter: brightness(80%);
-
+    flex-grow:1;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.473);
 }
+
 .information{
     flex-basis: 80%; 
     padding-right: 70px;
@@ -298,7 +302,6 @@ span{
 
 .headshot:hover {
     filter: var(--secondary-color);
-    box-shadow: 0px 0px 12px 2px var(--secondary-color);
     filter: brightness(100%);
 }
 
@@ -566,10 +569,10 @@ footer .main-text{
 
 
 
-@media only screen and (max-width: 1500px){ 
-    *{
+@media only screen and (max-width: 1000px){ 
+    /* *{
         display: none;
-    }
+    } */
     section {
         /* padding: 0px 10px 100px; */
         overflow: hidden;
