@@ -155,7 +155,8 @@ h1 {
     margin: 0;
     color: var(--primary-color);
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.726);
-
+    white-space: nowrap ;
+    flex-shrink: 1;
 }
 
 h2 {
@@ -198,16 +199,16 @@ span{
 }
 
 .button {
-    width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 8px 16px 8px 16px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
     height: 55px;
     border-radius: 15px;
     /* background-color: var(--secondary-color); */
     text-align: center;
     font-size: 25px;
     font-weight: 400;
-    padding-top: 5px;
+    /* padding-top: 5px; */
     margin-top: 20px;
     border: 3.5px solid var(--secondary-color);
     overflow: hidden;
@@ -288,7 +289,7 @@ span{
 
 .headshot-container{
     align-self: baseline;
-    flex-grow:1;
+    flex: 1 1 auto;
 }
 
 .headshot {
@@ -300,20 +301,22 @@ span{
     margin-left: 30px;
     transition: var(--transition-speed);
     flex-basis: 20%;
-    filter: brightness(80%);
-    flex-grow:1;
+    /* filter: brightness(80%); */
+    flex: 1 1 auto;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.473);
+    
 }
 
 .information{
-    flex-basis: 80%; 
+    min-width: 300px;
     padding-right: 70px;
-    padding: none;
+    
 }
 
 .headshot:hover {
     filter: var(--secondary-color);
-    filter: brightness(100%);
+    /* filter: brightness(100%); */
+    
 }
 
 .information h2 {
@@ -526,10 +529,13 @@ footer {
     height: auto;
     text-align: left;
     /* outline: yellow 2px solid; */
-    width:40vw;
+    width:55vw;
     float: left;
     /* outline: 2px solid red; */
     
+}
+footer a{
+    color: var(--secondary-color);
 }
 
 footer h2{
@@ -555,6 +561,7 @@ footer .main-text{
     overflow: hidden;
     transition: var(--transition-speed);
     font-style: none;
+    display:none;
     
 }
 
@@ -579,11 +586,9 @@ footer .main-text{
 
 
 @media only screen and (max-width: 1000px){ 
-    /* *{
-        display: none;
-    } */
+
     section {
-        /* padding: 0px 10px 100px; */
+        padding: 0 10px 0px 10px;
         overflow: hidden;
     }
 
@@ -593,22 +598,29 @@ footer .main-text{
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        
-        
     }
+
+    .header-subtext{
+        text-align: center;
+    }
+    
     .hero-text{
         margin: auto;
         flex-basis: 100%;
         
     }
     .hero-text h1{
-        font-size: 100px;
+        font-size: 90px;
         line-height: auto;
-        
     }
 
     nav{
         display: none;
+    }
+
+    .hero-prompts{
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .information p{
@@ -631,119 +643,73 @@ footer .main-text{
  /*--------ABOUT ME SECTION--------*/
     .sub-section {
         flex-wrap: wrap;
-        /* padding: 100px 60px; */
         height: 100vh;
         text-align: center;
         height: auto;
         justify-content: center;
+        padding: 30px 30px 30px 30px;
     }
 
-    .sub-section > h2{
+    .sub-section h2{
         text-align: center;
     }
-
 
     .information{
         /* flex-basis: 100%; */
         text-align: center;
         order: 1;
-        padding: 0px;
+        justify-self: center;
+        max-width: none;
+    }
+
+    .information p{
+        max-width: none;
+        font-size: 18px;
+        padding-right: 0px;
     }
 
     .headshot-container{
-        margin: auto;
         order: 0;
     }
 
     
-    .information p{
-        font-size: 20px;
-        text-align: center;
-    }
-
+    
     /*-----PROJECT SECTION------*/
     .sub-section-alternative {
         padding-top: 30px;
-        height: 100vh;
+        height: auto;
         align-items: center;
+    }
+
+    .sub-section-alternative h2{
+        white-space: nowrap ;
     }
    
     .project-container {
-        width: 100%;
         flex-wrap: wrap;
-        overflow-y: scroll;
     }
 
     
     /*-----Contact SECTION--------*/
+    footer{
+        display:none;
+    }
     .footer-container{
-        padding: 40px;
+        padding: 30px;
         margin: auto;
-    }
-}
-
-@media only screen and (max-width: 500px){ 
-    *{
-        display: none;
-        margin: none;
-        padding: none;
-    }
-
-    body{
-        max-width:100vw;
-    }
-    .hero{
-        background: url(images/citybg.jpg) no-repeat center center/cover fixed;
-        height: 100vh;
-    
-    }
-
-    nav{
-        display:none;
-    }
-    .hero-text h1{
-        font-size: 55px;
-    }
-    .title{
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-    /*--------ABOUT ME SECTION--------*/
-    .sub-section {
-        flex-wrap: wrap;
-        /* padding: 100px 30px; */
-        height: auto;
         text-align: center;
-        align-content: space-between;
-        margin: unset;
+        width: 100%;
+    }
+    .footer-container h2{
+        white-space: nowrap ;
     }
 
-    .information{
-        padding: unset;
+    .footer-container p{
+        text-align: center;
+        width: 100%;
+        float: none;
+        padding: none;
+        width: 80vw;
     }
-    .main-text{
-        font-size: 18px;
-    }
-
-    h2{
-        font-size:20px;
-    }
-    #about-me > div.information > p:nth-child(1){
-        display:none;
-    }
-    #about-me > div.information > p.main-text{
-        font-size: 15px;
-        padding: unset;
-        line-height: 25px;
-    }
-    div.headshot-container > img{
-        width: 250px;
-        height: 300px;
-    }
-
-    div.headshot-container{
-        display: block;
-    }
-
+    
 }
