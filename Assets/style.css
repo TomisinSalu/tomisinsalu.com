@@ -46,13 +46,26 @@ section {
 
 .hero{
     position: relative;
-    background: rgba(0, 0, 0, 0.2)url(images/citybg.jpg) no-repeat top -30px center/cover fixed;
     background-blend-mode: darken;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     padding-top: 100px;
 }
 
+.bg-bridge{
+    background: rgba(0, 0, 0, 0.2)url(images/bgnew.jpg) no-repeat top center/cover fixed;
+    background-blend-mode: darken;
+}
+
+.bg-city{
+    background: rgba(0, 0, 0, 0.2)url(images/citybg.jpg) no-repeat top -30px center/cover fixed;
+    background-blend-mode: darken;
+}
+
+.bg-mountain{
+    background: rgba(0, 0, 0, 0.2)url(images/mountainbg.jpg) no-repeat top center/cover fixed;
+    background-blend-mode: darken;
+}
 
 .header-subtext{
     line-height: 0px;
@@ -614,7 +627,6 @@ footer .main-text{
 
 
 @media only screen and (max-width: 1000px){ 
-
     section {
         padding: 0 10px 0px 10px;
         overflow: hidden;
@@ -624,6 +636,7 @@ footer .main-text{
         height: 100%;
         align-items: center;
         text-align: center;
+        flex-shrink: 1; 
     }
 
     .header-subtext{
@@ -684,8 +697,8 @@ footer .main-text{
         flex-direction: column;
         height: 200vh;
         justify-content: center;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .sub-section h2{
@@ -704,8 +717,8 @@ footer .main-text{
 
     .information p{
         max-width: none;
-        font-size: 18px;
-        
+        font-size: 16px;
+        line-height: 3rem;        
     }
 
     .headshot-container{
