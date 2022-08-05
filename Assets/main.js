@@ -7,7 +7,7 @@
 const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', function() { 
-    if(window.scrollY > 75)
+    if(window.scrollY > 20)
       nav.classList.add('scroll');
     else 
       nav.classList.remove('scroll');

@@ -46,7 +46,7 @@ section {
 
 .hero{
     position: relative;
-    background: rgba(0, 0, 0, 0.2)url(images/citybg.jpg) no-repeat center center/cover fixed;
+    background: rgba(0, 0, 0, 0.2)url(images/citybg.jpg) no-repeat top -30px center/cover fixed;
     background-blend-mode: darken;
     height: 100vh;
     width: 100%;
