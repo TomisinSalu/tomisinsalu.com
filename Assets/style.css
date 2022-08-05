@@ -155,12 +155,13 @@ center{
     text-align: center;
 }
 
+/* ANIMATIONS */
+
 h1 {
     font-size: 90px;
     margin: 0;
     color: var(--primary-color);
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.726);
-    white-space: nowrap ;
     flex-shrink: 1;
 }
 
@@ -192,10 +193,8 @@ span{
     height: 100%;
     justify-content: space-between;
     align-items: center;
-   
-    
+    flex: 1 1 auto; 
 }
-
 
 .hero-prompts{
     display: flex;
@@ -229,6 +228,10 @@ span{
 .button img{
     margin-left: 5px;
 }
+
+
+
+
 
 #resume{
     background-color: var(--secondary-color);
@@ -268,7 +271,6 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
 
 .button:hover {
     box-shadow: -5px 5px 8px 1px rgba(0, 0, 0, 0.352);
-    transform: translateX(1px) scale(.9) translateY(-3px);
     backdrop-filter: blur(0px);
     background-color: var(--secondary-color);
 }
@@ -618,9 +620,7 @@ footer .main-text{
     }
 
     .hero-area {
-        display: flex;
         height: 100%;
-        justify-content: space-between;
         align-items: center;
         text-align: center;
     }
@@ -652,7 +652,10 @@ footer .main-text{
 
     .hero-prompts{
         justify-content: center;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        gap: 30px
+
     }
 
     .information p{
@@ -664,22 +667,24 @@ footer .main-text{
         font-size: 30px;
         font-weight: 300px;
         padding-bottom: 40px;
+        white-space: nowrap ;
     }
 
     .button{
         margin: auto;
+        width: 400px;;
+
     }
     .socials{
         display: none;
     }
  /*--------ABOUT ME SECTION--------*/
     .sub-section {
-        flex-wrap: wrap;
-        height: 100vh;
-        text-align: center;
-        height: auto;
+        flex-direction: column;
+        height: 200vh;
         justify-content: center;
-        padding: 50px 30px 30px 50px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .sub-section h2{
@@ -706,7 +711,8 @@ footer .main-text{
         order: 0;
         all: unset;
         transform: none;
-        margin: auto;
+        margin: 0;
+        
         transform: translateX(-10px)
     }
     .headshot{
@@ -720,7 +726,6 @@ footer .main-text{
     
     /*-----PROJECT SECTION------*/
     .sub-section-alternative {
-        padding-top: 30px;
         height: auto;
         align-items: center;
     }
@@ -728,9 +733,17 @@ footer .main-text{
     .sub-section-alternative h2{
         white-space: nowrap ;
     }
-   
+
+   .sub-section-alternative hr{
+        width: 100vw;
+        align-self: center;
+        justify-self: center;
+        margin: auto;
+   }
+
     .project-container {
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-shrink: 1;
     }
 
     
