@@ -387,7 +387,7 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     /* max-height: 45px;
     min-height: 35px; */
     width: auto;
-    filter:saturate(0.6);
+    /* filter:saturate(1); */
 }
 .skills div p{
     visibility: visible;
@@ -763,8 +763,8 @@ footer .main-text{
         height: 300px;
         width: 300px;
         border-radius: 5vw;
-        max-height: 50vw;
-        max-width: 50vw;
+        max-height: 80vw;
+        max-width: 80vw;
         transform: none;
     }
 
