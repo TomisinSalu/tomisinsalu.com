@@ -65,6 +65,7 @@ section {
 .bg-mountain{
     background: rgba(0, 0, 0, 0.1)url(images/mountainbg.jpg) no-repeat top center/cover fixed;
     background-blend-mode: darken;
+    background-repeat: repeat-x;
 }
 
 .header-subtext{
@@ -761,6 +762,7 @@ footer .main-text{
         border-radius: 50px;
         height: 300px;
         width: 300px;
+        border-radius: 5vw;
         max-height: 50vw;
         max-width: 50vw;
         transform: none;
