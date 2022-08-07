@@ -16,7 +16,7 @@ html{
 
 :root{
     --primary-color:white;
-    --sub-primary-color: rgb(198, 198, 198);
+    --sub-primary-color: rgb(214, 214, 214);
     --secondary-color: rgb(241, 96, 44);
     --secondary-darker: rgb(205, 86, 42) ;
     --var-bg-color: rgb(2, 0, 36);
@@ -198,7 +198,9 @@ span{
     margin-top: 0px;    
     font-size: 32px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.704);
+    color: var(--sub-primary-color);
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.726);
+
 }
 
 .hero-area {
@@ -249,17 +251,6 @@ span{
 #resume{
     background-color: var(--secondary-color);
 }
-button {
-    z-index: 1;
-    position: relative;
-    font-size: inherit;
-    font-family: inherit;
-    color: white;
-    padding: 0.5em 1em;
-    outline: none;
-    border: none;
-    background-color: hsl(236, 32%, 26%);
-  }
   
 .wide-button{
     margin-left: 0px;
@@ -391,9 +382,9 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
  }
 .skills img{
     object-fit: cover;
-    height: 4vw;
-    max-height: 45px;
-    min-height: 35px;
+    height: 45px;
+    /* max-height: 45px;
+    min-height: 35px; */
     width: auto;
     filter:saturate(0.6);
 }
@@ -659,6 +650,7 @@ footer .main-text{
         align-items: center;
         text-align: center;
         flex-shrink: 1; 
+        float: 40px;
     }
 
     .header-subtext{
@@ -672,8 +664,13 @@ footer .main-text{
     }
     .hero-text h1{
         /* font-size: 90px; */
-        font-size: 15vw;
+        font-size: 12vw;
         line-height: auto;
+    }
+    .hero-text h2{
+        /* font-size: 90px; */
+        font-size: 5vw;
+        /* line-height: auto; */
     }
     .nav{
         justify-content: center;
@@ -695,11 +692,6 @@ footer .main-text{
 
     }
 
-    .information p{
-        color: var(--sub-primary-color);
-        line-height: 50px;
-        font-size: 25px;
-    }
     .title{
         font-size: 30px;
         font-weight: 300px;
@@ -708,10 +700,22 @@ footer .main-text{
     }
 
     .button{
-        margin: auto;
-        width: 400px;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 50vw;
+        font-size: 2rem;
+        height: auto;
+        transform:translateX(0px);
+        min-width: 200px;
 
     }
+    .button img{
+
+    }
+    
     .socials{
         display: none;
     }
@@ -752,7 +756,6 @@ footer .main-text{
         transform: none;
         margin: 0 auto;
         
-        transform: translateX(-10px)
     }
     .headshot{
         border-radius: 50px;
@@ -814,4 +817,81 @@ footer .main-text{
         width: 80vw;
     }
     
+}
+
+@media only screen and (max-width: 600px){ 
+
+    nav{
+        visibility: hidden;
+    }
+    /*--------LANDING PAGE--------*/
+    
+    .hero-area {
+        height: 100%;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 1; 
+        width: 100vw;
+        margin: 0 auto;
+        /* outline: red 1px solid; */
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        display: block;
+        top: 30vh;
+        
+    }
+
+    .header-subtext{
+        text-align: center;
+    }
+    
+    .hero-text{
+        margin: auto;
+        white-space: nowrap ;
+    }
+    .hero-text h1{
+        /* font-size: 90px; */
+        font-size: 15vw;
+        line-height: auto;
+    }
+    .nav{
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    #nav-list{
+        display: none;
+    }
+    .logo-container{
+        text-align:center;
+    }
+
+    .hero-prompts{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px
+
+    }
+
+    .title{
+        font-size: 30px;
+        font-weight: 300px;
+        padding-bottom: 40px;
+        white-space: nowrap ;
+    }
+
+    .socials{
+        display: none;
+    }
+
+    /*--------ABOUT ME SECTION--------*/
+    .information p{
+        max-width: none;
+        /* font-size: 16px; */
+        font-size: 4vw;
+        line-height: 7.5vw;        
+    }
+
 }
