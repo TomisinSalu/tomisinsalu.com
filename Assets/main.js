@@ -1,22 +1,30 @@
-//Change nav style on scroll
-
-// window.addEventListener('scroll', () =>{
-//     document.queryselector('nav').classList.toggle('nav-scroll'), window.scrollY > 0;
-// }
-// )
 const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', function() { 
-    if(window.scrollY > 20)
+    if(window.scrollY > 150)
       nav.classList.add('scroll');
     else 
       nav.classList.remove('scroll');
   });
 
-const title = document.getElementById("title")
+//SLIDESHOW
+// var i = 0;
+// var time = 2000;
+// imgClasses = ['bg-bridge', 'bg-mountain', 'bg-bridge'];
+// const header = document.getElementsById("bg")
 
-var animateText = function(){
-    strimgs
-}
+// function changeImg(){
+//   header.classList.toggle = "bg-bridge";
 
-window.setInterval(animateText, 3000);
+//   if (i < images.length - 1){
+//     i++;
+//   }else{
+//     i = 0;
+//   }
+//   console.log(i)
+//   setTimeout("changeImg()", time)
+// };
+
+// window.onload = changeImg;
+
+
