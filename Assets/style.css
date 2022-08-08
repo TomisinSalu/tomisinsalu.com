@@ -59,7 +59,7 @@ section {
 }
 
 .hero-text{
-    
+    white-space: nowrap;
 }
 
 .bg-bridge{
@@ -97,11 +97,29 @@ nav {
     /* backdrop-filter: blur(5px); */
 
 }  
+
+
+
 /* nav class on scroll using javascript  */
 nav.scroll{
     background-color: rgba(0, 0, 0, 0.797);
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='grey' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     backdrop-filter: blur(5px);
+}
+
+.fa-brands{
+    color: var(--sub-primary-color);
+    font-size: 30px;
+    cursor: pointer;
+    transition: var(--transition-speed);
+    align-self: flex-end;
+    display: flex;
+    margin: 15px;
+    padding-top: ;
+}
+
+.fa-brands:hover{
+    color: var(--primary-color);
 }
 
 a{
@@ -133,7 +151,7 @@ a{
 
 ul {
     display: flex;
-    justify-content: space-between;
+    gap: 2.5vw
      /* outline: 2px solid red;  */
 }
 
@@ -141,7 +159,7 @@ li {
     text-decoration: none;
     color: var(--primary-color);
     transition: color var(--transition-speed);
-    margin-left: 80px;
+
 }
 
 ul li a:hover, ul li a:focus{
@@ -308,7 +326,8 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     flex-direction: column;
     justify-content: space-evenly;
     height: 350px;
-    margin-right: 35px;
+    margin-right: 20vw;
+    visibility: hidden;
 
 }
 
@@ -420,7 +439,8 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     text-align: center;
     font-size: 25px;
     font-weight: 300;
-    color: var(--sub-primary-color)
+    color: var(--sub-primary-color);
+    margin-bottom: 15px;
 }
 
 .skills div:hover .skills div p{
