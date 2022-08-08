@@ -25,7 +25,7 @@ html{
     --sub-primary-color: rgb(214, 214, 214);
     --secondary-color: rgb(241, 96, 44);
     --secondary-darker: rgb(205, 86, 42) ;
-    --var-bg-color: rgb(2, 0, 36);
+    --var-bg-color: rgb(1, 0, 30);
     --subheading-size: 50px;
     
     --text-shadow: 0px 4px 5px #000000;
@@ -40,8 +40,8 @@ body {
     background-image: url(images/bg-texture.png); */
     scroll-behavior: smooth;
     /* background-color: #000929; */
-    background-color: #0f0026;
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2306006b' fill-opacity='0.57' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    background-color:  var(--var-bg-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2306006b' fill-opacity='0.3' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 section {
@@ -56,6 +56,10 @@ section {
     height: 110vh;
     width: 100%;
     padding-bottom: 15vh;
+}
+
+.hero-text{
+    
 }
 
 .bg-bridge{
@@ -180,7 +184,7 @@ h1 {
     font-size: 90px;
     margin: 0;
     color: var(--primary-color);
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.726);
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.379);
     flex-shrink: 1;
 }
 
@@ -202,19 +206,23 @@ span{
     line-height: 5px;
     padding: 0px;
     margin-top: 0px;    
-    font-size: 32px;
+    font-size: 37px;
     font-weight: 500;
-    color: var(--sub-primary-color);
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.726);
+    color: var(--primary-color);
+    filter: opacity(0.9);
+    /* text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.726); */
 
 }
-
+i{
+    margin-right: 6px;
+}
 .hero-area {
     display: flex;
     height: 100%;
     justify-content: space-between;
     align-items: center;
     flex: 1 1 auto; 
+
 }
 
 .hero-prompts{
@@ -229,7 +237,7 @@ span{
     /* padding-left: 10px;
     padding-right: 10px; */
     height: 55px;
-    border-radius: 15px;
+    border-radius: 10px;
     /* background-color: var(--secondary-color); */
     text-align: center;
     font-size: 25px;
@@ -336,7 +344,7 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     align-self: center;
     margin-right: 7rem;
     flex: 1 1 auto;
-    border-radius: 25px;
+    border-radius: 15px;
     padding-top: 20px;
 }
 
@@ -344,7 +352,7 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     object-fit: cover;
     width: 320px;
     height: 420px;
-    border-radius: 25px;
+    border-radius: 15px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.473);
     transition: var(--transition-speed);
 }
@@ -499,14 +507,14 @@ hr{
     width: 600px;
     height: 426px;
     margin-top: 30px;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 15px 15px 15px 15px;
     transition: var(--transition-speed);
     overflow-y: hidden;
     margin-bottom: 40px;
     color: var(--sub-primary-color);
     background-color: black;
     overflow: hidden;
-    box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.272);
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.447);
     
 }
 
@@ -525,7 +533,7 @@ hr{
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='grey' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     height: 130px;
     padding: 15px;
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 0px 0px 15px 15px;
     padding-bottom: 5px;
     padding-top: 5px;
     overflow: hidden;
@@ -667,6 +675,7 @@ footer .main-text{
     }
     
     .hero-text{
+        padding: 0;
         margin: auto;
         flex-basis: 100%;
         white-space: nowrap ;
@@ -863,6 +872,7 @@ footer .main-text{
     .hero-text{
         margin: auto;
         white-space: nowrap ;
+        padding: 0;
     }
     .hero-text h1{
         /* font-size: 90px; */
