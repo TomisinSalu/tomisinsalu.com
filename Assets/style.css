@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+
+.animate__fadeInLeft,
+.animate__fadeInRight{
+    --animate-duration: 1.4s;
+}
+
 html{
     font-size: 10px;
     width: 100vw;
@@ -49,7 +55,7 @@ section {
     background-blend-mode: darken;
     height: 110vh;
     width: 100%;
-    padding-top: 100px;
+    padding-bottom: 15vh;
 }
 
 .bg-bridge{
@@ -58,14 +64,13 @@ section {
 }
 
 .bg-city{
-    background: rgba(0, 0, 0, 0.2)url(images/citybg.jpg) no-repeat top -70px center/cover fixed;
+    background: rgba(0, 0, 0, 0)url(images/citybg.jpg) no-repeat center center/cover fixed;
     background-blend-mode: darken;
 }
 
 .bg-mountain{
     background: rgba(0, 0, 0, 0.1)url(images/mountainbg.jpg) no-repeat top center/cover fixed;
     background-blend-mode: darken;
-    background-repeat: repeat-x;
 }
 
 .header-subtext{
@@ -216,6 +221,7 @@ span{
     display: flex;
     justify-content: left;
     margin-top: 40px;
+
 }
 
 .button {
@@ -227,7 +233,7 @@ span{
     /* background-color: var(--secondary-color); */
     text-align: center;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 500;
     /* padding-top: 5px; */
     margin-top: 20px;
     border: 3.5px solid var(--secondary-color);
@@ -310,14 +316,17 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
 /*------------ABOUT ME SECTION--------------*/
 .sub-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     height: auto;
     align-items: center;
-    padding-top: 10vh;
-    flex-grow: 1;
+    padding-top: 12.5vh;
+    padding-left: 12.5vw;
+    /* flex-grow: 1; */
     /* outline: white 3px solid; */
     gap: 4vw;
-    margin-bottom: 5vh;
+    margin: 0 auto;
+    margin-bottom: 12.5vh;
+    
 }
 
 .headshot-container{
@@ -328,14 +337,13 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     margin-right: 7rem;
     flex: 1 1 auto;
     border-radius: 25px;
-    padding-bottom: 40px;
-    flex-shrink: 4;
+    padding-top: 20px;
 }
 
 .headshot {
     object-fit: cover;
-    width: 350px;
-    height: 480px;
+    width: 320px;
+    height: 420px;
     border-radius: 25px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.473);
     transition: var(--transition-speed);
@@ -363,11 +371,11 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     height: auto;
     width: 100vw;
     margin: 0 auto;
-    margin-bottom: 8vh;
     background-color: rgba(0, 0, 0, 0.797);
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='grey' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    padding-top: 15px;
-    padding-bottom: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.473);
+    padding-top: 2vh;
+    margin-bottom: 12.5vh;
 }
 .skills{  
     display: flex; 
@@ -378,8 +386,10 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     /* outline: red 1px solid; */
     margin: 0 auto;
     align-items: flex-start;
-    padding-top: 2vh;
+    padding-bottom: 3vh;
+   
     gap: 25px;
+    
  }
 .skills img{
     object-fit: cover;
@@ -402,7 +412,7 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     text-align: center;
     font-size: 25px;
     font-weight: 300;
-    color: var(--secondary-color)
+    color: var(--sub-primary-color)
 }
 
 .skills div:hover .skills div p{
@@ -424,28 +434,22 @@ h3{
     color: var(--sub-primary-color)
 }
 
-.divider{
-    height: 3px;
-    background-color: var(--sub-primary-color);
-    border: none;
-    border-radius: 5px;
-    width: auto;
-}
-
 .sub-section-alternative {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 30px 100px;
+    padding-top: 12.5vh;
     /* outline: red 1px solid; */
     height: auto;
     /* outline: 2px solid red; */
 }
-
+.sub-section-alternative .header-subtext{
+    text-align: center;
+}
 .sub-section-alternative h2 {
     font-size: var(--subheading-size);
     line-height: 15px;
-    text-align: left;
 
 }
 
@@ -567,6 +571,7 @@ hr{
     font-weight: 300px;
 }
 
+/*------------New Projetct Layout--------------*/
 
 
 /*------------FOOTER/CONTACT SECTION--------------*/
@@ -574,9 +579,9 @@ hr{
 footer {
     display:block;
     height:auto;
-    padding: 20px 100px ;
-    /* outline: red 2px solid; */
-    background: url(images/contact-bg.jpg) no-repeat center center/cover fixed;
+    padding: 50px 100px ;
+    background-color: rgba(0, 0, 0, 0.797);
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='grey' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     overflow: hidden;
     /* outline: 2px rgb(17, 0, 255) solid; */
 }
@@ -584,7 +589,7 @@ footer {
     height: auto;
     text-align: left;
     /* outline: yellow 2px solid; */
-    width:55vw;
+    width: 30vw;
     float: left;
     /* outline: 2px solid red; */
     
@@ -600,6 +605,8 @@ footer h2{
 
 footer .main-text{
     color: var(--sub-primary-color);
+    font-size: 1.5rem;
+    line-height: auto;
 }
 
 .footer-button{
@@ -712,6 +719,7 @@ footer .main-text{
         height: auto;
         transform:translateX(0px);
         min-width: 200px;
+        backdrop-filter: blur(5px);
 
     }
     .button img{
