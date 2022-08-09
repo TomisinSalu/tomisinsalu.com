@@ -55,7 +55,7 @@ section {
     background-blend-mode: darken;
     height: 110vh;
     width: 100%;
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
 }
 
 .hero-text{
@@ -455,7 +455,7 @@ h3{
     color: var(--secondary-color);
 }
 .main-text{
-    line-height: 4rem;
+    line-height: 3.2rem;
     font-size: 1.3vw;
     font-weight: 350;
     text-align: left;
@@ -570,8 +570,8 @@ hr{
 }
 
 .description-container .main-text{
-    line-height: 3rem;
-    font-size: 15px;
+    line-height: normal;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -605,8 +605,9 @@ hr{
 /*------------FOOTER/CONTACT SECTION--------------*/
     
 footer {
+    position: relative;
     display:block;
-    height:auto;
+    height: 40vh;
     padding: 50px 100px ;
     background-color: rgba(0, 0, 0, 0.797);
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='grey' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
@@ -615,15 +616,27 @@ footer {
 }
 .footer-container{
     height: auto;
-    text-align: left;
+    text-align: center;
     /* outline: yellow 2px solid; */
-    width: 30vw;
-    float: left;
+    width: 50vw;
+    margin: 0 auto;
     /* outline: 2px solid red; */
     
 }
 footer a{
     color: var(--secondary-color);
+}
+footer .header-subtext{
+    text-align: center;
+}
+
+footer .footer-text{
+    font-size: 16px; 
+    color: var(--sub-primary-color); 
+    position: absolute; 
+    bottom: 10px;
+    /* outline: 2px red solid; */
+    left: 42%;
 }
 
 footer h2{
@@ -632,27 +645,8 @@ footer h2{
 }
 
 footer .main-text{
-    color: var(--sub-primary-color);
-    font-size: 1.5rem;
-    line-height: auto;
-}
-
-.footer-button{
-    height: 50px;
-    width: 400px;
+    line-height: normal;
     text-align: center;
-    border-radius: 14px;
-    background-color: transparent;
-    font-size: 25px;
-    font-weight: 300;
-    padding-top: 5px;
-    margin-top: 20px;
-    border: 3px solid var(--secondary-color);
-    overflow: hidden;
-    transition: var(--transition-speed);
-    font-style: none;
-    display:none;
-    
 }
 
 .footer-button:hover{
