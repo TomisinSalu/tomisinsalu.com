@@ -53,9 +53,10 @@ section {
 .hero{
     position: relative;
     background-blend-mode: darken;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
-    padding-bottom: 10vh;
+    /* padding-bottom: 10vh; */
+    /* padding-left: 13vw; */
 }
 
 .hero-text{
@@ -388,7 +389,6 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     text-align: left;
 }
 
-
 .hide{
     display:none;
 }
@@ -424,7 +424,6 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
     /* max-height: 45px;
     min-height: 35px; */
     width: auto;
-    /* filter:saturate(1); */
 }
 .skills div p{
     visibility: visible;
@@ -438,7 +437,7 @@ transform: translate3d(200%, 0, 0) rotate(35deg);
 .skill-text{
     text-align: center;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--sub-primary-color);
     margin-bottom: 15px;
 }
@@ -743,9 +742,6 @@ footer .main-text{
         transform:translateX(0px);
         min-width: 200px;
         backdrop-filter: blur(5px);
-
-    }
-    .button img{
 
     }
     
