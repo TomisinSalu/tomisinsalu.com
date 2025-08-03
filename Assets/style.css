@@ -278,7 +278,14 @@ i{
     margin-left: 5px;
 }
 
-
+.inline-container {
+  display: flex;
+  align-items: center; /* vertically centers items */
+  gap: 16px; /* space between logo and text */
+}
+/* .logo {
+  height: 40px; /* adjust as needed */
+} */
 
 
 
