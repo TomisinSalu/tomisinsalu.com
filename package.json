@@ -2,5 +2,11 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "install": "^0.13.0"
+  },
+  "scripts": {
+    "start": "live-server ."
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
